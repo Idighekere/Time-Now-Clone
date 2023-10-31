@@ -1,0 +1,165 @@
+.toggle {
+    display: inline-block;
+    width: 4.68em;
+    height: 2em;
+    background-color: #2196f3;
+    position: relative;
+    border-radius: 32px;
+}
+
+.toggle::after {
+    background-color: white;
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    top: 1px;
+    left: 1px;
+    content: '';
+    transition: all .5s;
+    border-radius: 33px;
+}
+
+.checkbox:checked+.toggle::after {
+    left: 39px;
+}
+
+.checkbox:checked+.toggle {
+    background-color: #2196f3;
+}
+
+.checkbox {
+    display: none;
+}
+
+main div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main {
+    text-align: center;
+}
+
+
+main div label {
+    margin: 0 1em;
+}
+
+.price-containers {
+    border-radius: .5em;
+    padding: 2em;
+    border: 1px solid #444;
+}
+
+.price+.price {
+    margin-top: 1em;
+}
+
+.amt {
+    font-size: 2.5em;
+    font-weight: 900;
+    transition: .5s;
+}
+
+.amts {
+    font-size: 1.5em;
+}
+
+.feature {
+    list-style-type: none;
+    padding: 0;
+}
+
+#monthly {
+    font-weight: bold;
+}
+
+.feature li {
+    align-items: center;
+    display: flex;
+    padding: .3em;
+}
+
+.feature li img {
+    margin-right: .8em;
+}
+
+.subscribe {
+    background-color: #0b125a;
+    border: none;
+    padding: 1em;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.pricing-main {
+    padding: 0 1em;
+}
+
+
+
+/*Medium Screen Size*/
+
+@media only screen and (min-width: 650px) {
+    .pricing-main {
+        padding: 0 2em;
+    }
+
+    .prices {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    #last-c {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+
+    .last-c {
+        margin-left: 0em;
+        width: 100%;
+        grid-column: auto;
+    }
+
+
+    .price+.price {
+        margin-top: 0;
+    }
+
+
+    .box-1 {
+        margin-right: 1em;
+    }
+
+    .pricing-footer {
+        padding: 1em 2em;
+    }
+}
+
+/* Large Screen sizez*/
+@media only screen and (min-width: 800px) {
+
+    .prices {
+        display: flex;
+        padding: 0 4em;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* justify-content: center; */
+    }
+
+    #last-c {
+        margin-top: 0;
+    }
+
+
+    .last-c {
+        margin-left: 1em;
+        width: auto;
+    }
+
+    .pricing-footer {
+        padding: 0 2em;
+    }
+}
